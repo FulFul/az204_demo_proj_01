@@ -26,6 +26,6 @@ public class HelloController {
 	@ResponseStatus ( HttpStatus.CREATED )
 	public String test( HttpServletRequest request, HttpServletResponse response ) {
 		log.info( "[version 1.02]: Received a new request for /test endpoint" );
-		return "Test SUCCESSFUL";
+		return "[version 1.02] Test SUCCESSFUL";
 	}
 }
