@@ -18,14 +18,14 @@ public class HelloController {
 	@GetMapping ( "/{product_id}" )
 	@ResponseStatus ( HttpStatus.CREATED )
 	public String createHotel( @PathVariable ( name = "product_id" ) String productId, HttpServletRequest request, HttpServletResponse response ) {
-		log.info( "Received a new request to /products/" + productId + " endpoint" );
-		return "This is a product number " + productId;
+		log.info( "[version 1.01]: Received a new request to /products/" + productId + " endpoint" );
+		return "[version 1.01]: This is a product number " + productId;
 	}
 
 	@GetMapping ( "/test" )
 	@ResponseStatus ( HttpStatus.CREATED )
 	public String test( HttpServletRequest request, HttpServletResponse response ) {
-		log.info( "Received a new request for /test endpoint" );
+		log.info( "[version 1.01]: Received a new request for /test endpoint" );
 		return "Test SUCCESSFUL";
 	}
 }
